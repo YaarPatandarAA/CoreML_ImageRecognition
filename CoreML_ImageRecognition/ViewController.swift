@@ -51,7 +51,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 fatalError("Model Failed to process Image")
             }
             
-            print("\n")
             for i in 0...3{
                 self.labels[i].text = results[i].identifier
             }
