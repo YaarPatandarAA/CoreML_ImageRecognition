@@ -13,6 +13,7 @@ import Vision
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var labels: Array<UILabel>!
     
     let imagePicker = UIImagePickerController()
     
@@ -51,8 +52,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             
             print("\n")
-            for i in 0...5{
-                print(results[i].identifier)
+            for i in 0...3{
+                self.labels[i].text = results[i].identifier
             }
             
         }

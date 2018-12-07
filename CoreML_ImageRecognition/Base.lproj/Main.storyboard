@@ -18,15 +18,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cxt-YY-bft">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="622"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="FXT-PX-OSg">
+                                <rect key="frame" x="10" y="711.66666666666663" width="394" height="159.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSO-6L-4aF">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuI-RQ-J3x">
+                                        <rect key="frame" x="0.0" y="46.333333333333371" width="394" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3w-O9-9Gy">
+                                        <rect key="frame" x="0.0" y="92.666666666666742" width="394" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXO-MK-7Ji">
+                                        <rect key="frame" x="0.0" y="139" width="394" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Cxt-YY-bft" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1oJ-cA-6mR"/>
-                            <constraint firstItem="Cxt-YY-bft" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M7R-iw-Xeq"/>
-                            <constraint firstItem="Cxt-YY-bft" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pWM-gg-CD5"/>
-                            <constraint firstAttribute="bottom" secondItem="Cxt-YY-bft" secondAttribute="bottom" id="q5d-vs-OF8"/>
+                            <constraint firstAttribute="bottom" secondItem="FXT-PX-OSg" secondAttribute="bottom" constant="25" id="2b1-Ef-oRu"/>
+                            <constraint firstItem="FXT-PX-OSg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="9O2-Tf-XZw"/>
+                            <constraint firstItem="FXT-PX-OSg" firstAttribute="top" secondItem="Cxt-YY-bft" secondAttribute="bottom" id="BHT-nm-jDE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FXT-PX-OSg" secondAttribute="trailing" constant="10" id="GNc-Wf-agh"/>
+                            <constraint firstItem="Cxt-YY-bft" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="p2e-7W-nTs"/>
+                            <constraint firstItem="FXT-PX-OSg" firstAttribute="top" secondItem="Cxt-YY-bft" secondAttribute="bottom" constant="1.6699999999999999" id="p7r-lQ-Cua"/>
+                            <constraint firstItem="Cxt-YY-bft" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rgG-eh-CpR"/>
+                            <constraint firstItem="Cxt-YY-bft" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tyA-ci-1XB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -44,6 +77,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="Cxt-YY-bft" id="ewf-E2-AEo"/>
+                        <outletCollection property="labels" destination="rSO-6L-4aF" collectionClass="NSMutableArray" id="2Tw-AZ-YX2"/>
+                        <outletCollection property="labels" destination="BuI-RQ-J3x" collectionClass="NSMutableArray" id="0LT-hE-Jkv"/>
+                        <outletCollection property="labels" destination="U3w-O9-9Gy" collectionClass="NSMutableArray" id="MfM-6J-l2s"/>
+                        <outletCollection property="labels" destination="DXO-MK-7Ji" collectionClass="NSMutableArray" id="6f4-pZ-DOp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
